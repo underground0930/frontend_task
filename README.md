@@ -1,7 +1,6 @@
 # frontend tasks
 
-- 「gulp」を使用していない node
-- 「webpack」は js のバンドルのみに使用してます。
+- 「gulp」未使用 node タスク
 
 ## 開発環境
 
@@ -14,6 +13,17 @@
 - ブラウザのリロードには「browser-sync」を使用しています
 
 を使用しています。
+
+## 推奨する VSCode 拡張機能をインストール
+
+https://future-architect.github.io/articles/20200828/
+
+## Lint,整形 ツール
+
+- ESLint
+- Prettier
+- StyleLint
+- の３つが、pre-commit 時に走ります（lint-staged）
 
 ## command line
 

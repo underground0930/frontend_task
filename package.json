@@ -24,6 +24,9 @@
     "*.{js,ts,jsx,tsx}": [
       "npm run lint",
       "npm run format"
+    ],
+    "*.{scss}": [
+      "npm run lint:scss"
     ]
   },
   "browserslist": [],
