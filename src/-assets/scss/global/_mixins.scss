@@ -8,21 +8,23 @@
 
 @mixin fs($font-size, $line-height: null, $lineHeightCrop: true) {
   font-size: $font-size + px;
-  @if ($line-height!=null) {
+  @if $line-height!=null {
     line-height: math.div($line-height, $font-size);
   }
-  @if ($lineHeightCrop == true) {
-    &:before,
-    &:after {
+  @if $lineHeightCrop == true {
+    &::before,
+    &::after {
       content: '';
       display: block;
       height: 0;
       width: 0;
     }
-    &:before {
+
+    &::before {
       margin-bottom: calc((1 - math.div($line-height, $font-size)) * math.div($font-size, 2) * 1px);
     }
-    &:after {
+
+    &::after {
       margin-top: calc((1 - math.div($line-height, $font-size)) * math.div($font-size, 2) * 1px);
     }
   }
@@ -62,7 +64,7 @@
 //////////////////////////////////////////
 
 @mixin before {
-  &:before {
+  &::before {
     content: '';
     display: block;
     @content;
@@ -70,7 +72,7 @@
 }
 
 @mixin after {
-  &:after {
+  &::after {
     content: '';
     display: block;
     @content;
@@ -82,13 +84,13 @@
 //////////////////////////////////////////
 
 @mixin pc() {
-  @media not all and (max-width: map-get($breakpoints, sp_pc) + 'px') {
+  @media not all and (max-width: map.get($breakpoints, sp_pc) + 'px') {
     @content;
   }
 }
 
 @mixin sp() {
-  @media all and (max-width: map-get($breakpoints, sp_pc) + 'px') {
+  @media all and (max-width: map.get($breakpoints, sp_pc) + 'px') {
     @content;
   }
 }

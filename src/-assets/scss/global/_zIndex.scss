@@ -14,5 +14,5 @@ $zIndex: (
 );
 
 @function zIndex($key) {
-  @return map-get($zIndex, $key);
+  @return map.get($zIndex, $key);
 }

@@ -41,7 +41,7 @@
   },
   "fs": {
     "prefix": "fs",
-    "body": ["@include fs($1, $2, $3);"],
+    "body": ["@include fs($1, $2);"],
     "description": "fs"
   }
 }

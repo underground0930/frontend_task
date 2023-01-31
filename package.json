@@ -14,7 +14,7 @@
     "webpack:dev": "cross-env NODE_ENV=\"development\" webpack",
     "del-dummy": "rm -R htdocs/assets/json/_dummy htdocs/assets/img/_dummy htdocs/assets/movie/_dummy",
     "lint:ejs": "ejslint 'src/**/*.{ejs,html}'",
-    "lint:scss": "stylelint 'src/**/*.scss'",
+    "lint:scss": "stylelint 'src/**/*.scss' --fix",
     "lint": "eslint 'src/-assets/js/**/*' --fix --ext .ts,.tsx",
     "format": "prettier --write 'src/-assets/js/**/*.{js,jsx,ts,tsx}'",
     "lint-staged": "lint-staged",
