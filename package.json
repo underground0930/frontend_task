@@ -13,10 +13,11 @@
     "webpack:prod": "cross-env NODE_ENV=\"production\" webpack",
     "webpack:dev": "cross-env NODE_ENV=\"development\" webpack",
     "del-dummy": "rm -R htdocs/assets/json/_dummy htdocs/assets/img/_dummy htdocs/assets/movie/_dummy",
-    "lint:ejs": "ejslint 'src/**/*.{ejs,html}'",
-    "lint:scss": "stylelint 'src/**/*.scss' --fix",
     "lint": "eslint 'src/-assets/js/**/*' --fix --ext .ts,.tsx",
+    "lint:scss": "stylelint 'src/**/*.scss' --fix",
+    "lint:ejs": "ejslint 'src/**/*.{ejs,html}'",
     "format": "prettier --write 'src/-assets/js/**/*.{js,jsx,ts,tsx}'",
+    "format:scss": "prettier --write 'src/-assets/scss/**/*.scss'",
     "lint-staged": "lint-staged",
     "prepare": "husky install"
   },
@@ -25,8 +26,9 @@
       "npm run lint",
       "npm run format"
     ],
-    "*.{scss}": [
-      "npm run lint:scss"
+    "*.scss": [
+      "npm run lint:scss",
+      "npm run format:scss"
     ]
   },
   "browserslist": [],
