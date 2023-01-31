@@ -2,13 +2,11 @@ import ReactDOM from 'react-dom/client'
 import SwiperCore, { Pagination, Navigation, Swiper } from 'swiper'
 SwiperCore.use([Pagination, Navigation])
 
-// React components
-import App from '@/components/pages/App'
-
-// modules
-import { fetchApi } from '@/utils/fetchApi'
 import { checkImgsLoad } from '@/utils/checkImgsLoad'
 import { debounceEvent } from '@/utils/debounceEvent'
+import { fetchApi } from '@/utils/fetchApi'
+
+import App from '@/components/pages/App'
 
 export class Top {
   swiper: any
