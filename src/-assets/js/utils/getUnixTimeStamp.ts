@@ -6,7 +6,7 @@
 
 export const getUnixTimeStamp = (time?: string): number => {
   if (!time) {
-    return new Date().getTime();
+    return new Date().getTime()
   }
-  return new Date(time).getTime();
-};
+  return new Date(time).getTime()
+}

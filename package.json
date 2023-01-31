@@ -14,7 +14,16 @@
     "webpack:dev": "cross-env NODE_ENV=\"development\" webpack",
     "del-dummy": "rm -R htdocs/assets/json/_dummy htdocs/assets/img/_dummy htdocs/assets/movie/_dummy",
     "lint:ejs": "ejslint 'src/**/*.{ejs,html}'",
-    "lint": "eslint 'src/-assets/js/**/*' --fix --ext .ts,.tsx"
+    "lint": "eslint 'src/-assets/js/**/*' --fix --ext .ts,.tsx",
+    "format": "prettier --write 'src/-assets/js/**/*.{js,jsx,ts,tsx}'",
+    "lint-staged": "lint-staged",
+    "prepare": "husky install"
+  },
+  "lint-staged": {
+    "*.{js,ts,jsx,tsx}": [
+      "npm run lint",
+      "npm run format"
+    ]
   },
   "browserslist": [],
   "eslintIgnore": [

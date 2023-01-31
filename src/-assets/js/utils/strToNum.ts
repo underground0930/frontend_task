@@ -7,11 +7,11 @@
  */
 
 export const strToNum = (defaultVal: number, str: string | undefined): number => {
-  if (str === undefined) return defaultVal;
+  if (str === undefined) return defaultVal
 
-  const parseNum = Number(str);
+  const parseNum = Number(str)
 
-  if (Number.isNaN(parseNum)) return defaultVal;
+  if (Number.isNaN(parseNum)) return defaultVal
 
-  return parseNum;
-};
+  return parseNum
+}
