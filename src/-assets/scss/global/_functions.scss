@@ -1,0 +1,29 @@
+@use 'sass:math';
+@use 'sass:map';
+@use './breakpoint' as *;
+
+/* ===============================================
+# grid
+=============================================== */
+
+@function grid($cs, $vs) {
+  @if $cs == 0 {
+    // 赤だけ
+    @return calc(var(--vs) * #{$vs});
+  } @else if $vs == 0 {
+    // 白だけ
+    @return calc(var(--cs) * #{$cs});
+  } @else {
+    // 白 + 赤
+    @return calc(var(--cs) * #{$cs} + var(--vs) * #{$vs});
+  }
+}
+
+// 画面に応じたサイズ ////////////////////
+@function pc_vw($num, $base: 1440) {
+  @return (1vw * $num / $base * 100);
+}
+
+@function sp_vw($num, $base: 750) {
+  @return (1vw * $num / $base * 100);
+}

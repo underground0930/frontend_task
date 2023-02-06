@@ -1,8 +1,27 @@
 {
-  "flex": {
-    "prefix": "flex",
-    "body": ["display: flex;", "align-items: ${1:center};", "justify-content: ${2:space-between};"],
-    "description": "flex"
+  "comment": {
+    "prefix": "cmt",
+    "body": [
+      "/* ===============================================",
+      "# $1",
+      "=============================================== */"
+    ],
+    "description": "comment out"
+  },
+  "flex-c": {
+    "prefix": "flex-c",
+    "body": ["display: flex;", "align-items: center;", "justify-content: center;"],
+    "description": "flex-c"
+  },
+  "flex-b": {
+    "prefix": "flex-b",
+    "body": ["display: flex;", "align-items: center;", "justify-content: space-between;"],
+    "description": "flex-b"
+  },
+  "flex-w": {
+    "prefix": "flex-w",
+    "body": ["display: flex;", "align-items: center;", "justify-content: space-between;", "flex-wrap: wrap;"],
+    "description": "flex-w"
   },
   "fixed": {
     "prefix": "fixed",

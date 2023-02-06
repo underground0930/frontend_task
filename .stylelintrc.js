@@ -14,5 +14,9 @@ module.exports = {
     'scss/percent-placeholder-pattern': null,
     'scss/at-extend-no-missing-placeholder': null,
     'scss/at-function-pattern': null,
+    'scss/comment-no-empty': true,
+    'comment-no-empty': null,
+    'scss/double-slash-comment-empty-line-before': null,
+    'scss/comment-no-empty': null,
   },
 }

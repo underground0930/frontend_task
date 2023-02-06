@@ -1,14 +1,25 @@
-@charset "UTF-8";
 @use 'sass:map';
 @use './breakpoint' as *;
 
-////////////////////////////
-// 変数
-////////////////////////////
+/* ===============================================
+# variables
+=============================================== */
 
 :root {
   --mainColor: red;
   --breakpoint: #{map.get($breakpoints, sp_pc)};
   --commonFont: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Hiragino Sans', 'Hiragino Kaku Gothic ProN', Meiryo,
     sans-serif;
+  @include pc {
+    --header-height: 130px;
+    --cs: 60px; // 白の固定グリッドのサイズ
+    --vs: (100vw - (60px * 13)) / 12; // 赤の可変グリッドのサイズ
+    --cvs: var(--cs) + var(--vs); // 白 + 赤のグリッドのサイズ
+  }
+  @include sp {
+    --header-height: 100px;
+    --cs: 40px; // 白の固定グリッドのサイズ
+    --vs: 40px; // 赤の可変グリッドのサイズ
+    --cvs: var(--cs) + var(--vs); // 白 + 赤のグリッドのサイズ
+  }
 }
