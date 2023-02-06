@@ -8,45 +8,40 @@
     ],
     "description": "comment out"
   },
-  "flex-c": {
-    "prefix": "flex-c",
-    "body": ["display: flex;", "align-items: center;", "justify-content: center;"],
-    "description": "flex-c"
+  "flex-center": {
+    "prefix": "flex-center",
+    "body": ["display: flex;", "flex-wrap: wrap;", "align-items: center;", "justify-content: center;"],
+    "description": "flexbox with center center"
   },
-  "flex-b": {
-    "prefix": "flex-b",
-    "body": ["display: flex;", "align-items: center;", "justify-content: space-between;"],
-    "description": "flex-b"
-  },
-  "flex-w": {
-    "prefix": "flex-w",
-    "body": ["display: flex;", "align-items: center;", "justify-content: space-between;", "flex-wrap: wrap;"],
-    "description": "flex-w"
+  "flex-between": {
+    "prefix": "flex-between",
+    "body": ["display: flex;", "flex-wrap: wrap;", "align-items: center;", "justify-content: space-between;"],
+    "description": "flexbox with spaec-between center"
   },
   "fixed": {
     "prefix": "fixed",
     "body": ["position: fixed;", "left: ${1:0};", "top: ${2:0};", "right: ${3:0};", "bottom: ${4:0};"],
-    "description": "fixed"
+    "description": "position fixed"
   },
   "absolute": {
     "prefix": "absolute",
     "body": ["position: absolute;", "left: ${1:0};", "top: ${2:0};", "right: ${3:0};", "bottom: ${4:0};"],
-    "description": "absolute"
+    "description": "position absolute"
   },
   "sticky": {
     "prefix": "sticky",
     "body": ["position: sticky;", "top: ${1:0};"],
-    "description": "sticky"
+    "description": "position sticky"
   },
   "relative": {
     "prefix": "relative",
     "body": ["position: relative;"],
-    "description": "relative"
+    "description": "position relative"
   },
   "ratio": {
     "prefix": "ratio",
     "body": ["aspect-ratio: $1/$2;"],
-    "description": "ratio"
+    "description": "aspect-ratio"
   },
   "pc": {
     "prefix": "pc",
