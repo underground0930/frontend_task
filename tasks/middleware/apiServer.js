@@ -1,22 +1,19 @@
-const express = require('express');
+const express = require('express')
+
+const json = require('./api.json')
 
 const apiServer = function () {
   return [
     express.json(),
     express.urlencoded({ extended: true }),
     {
-      route: '/contact_api/',
+      route: '/api/',
       handle: function (req, res, next) {
-        console.log(req.body);
-        res.setHeader('Content-Type', 'application/json');
-        res.end(
-          JSON.stringify({
-            isValid: true,
-          })
-        );
+        res.setHeader('Content-Type', 'application/json')
+        res.end(JSON.stringify(json))
       },
     },
-  ];
-};
+  ]
+}
 
-module.exports = apiServer;
+module.exports = apiServer

@@ -1,7 +1,6 @@
 const bs = require('browser-sync').create() // ローカルサーバー、ブラウザのリロード
 const getJsonData = require('./getJsonData')
 const apiServer = require('./middleware/apiServer')
-const { createProxyMiddleware } = require('http-proxy-middleware')
 
 /************************************************v
  my task
@@ -101,12 +100,7 @@ const serverTask = () => {
     server: [paths.dist.root],
     https: false,
     startPath: './list.html',
-    middleware: [
-      createProxyMiddleware('/contact_api', {
-        target: 'http://localhost:8888/',
-        changeOrigin: false,
-      }),
-    ],
+    middleware: apiServer(),
     reloadDebounce: 100,
   })
 
@@ -115,7 +109,6 @@ const serverTask = () => {
   bs.watch(paths.dist.assets + pattern.img).on('change', bs.reload)
   bs.watch(paths.dist.assets + '/**/*.json').on('change', bs.reload)
   bs.watch(paths.dist.assets + '/**/*.css', (e, f) => {
-    console.log(e)
     if (e !== 'change') return
     bs.reload('*.css')
   })
