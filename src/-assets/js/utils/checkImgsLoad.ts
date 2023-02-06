@@ -13,7 +13,7 @@ type Props = {
   callbackFinish: () => void
 }
 
-export const checkImgsLoad = ({ imgArray, timeout = 5000, callback, callbackFinish }: Props): void => {
+export const checkImgsLoad = ({ imgArray, timeout = 7000, callback, callbackFinish }: Props): void => {
   const len = imgArray.length
   let finished = false
   let count = 0

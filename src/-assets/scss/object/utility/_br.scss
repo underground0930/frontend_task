@@ -6,7 +6,7 @@
 
 @use '../../global' as *;
 
-.u-pcbr {
+.u-br-pc {
   @include pc {
     display: block;
   }
@@ -15,7 +15,7 @@
   }
 }
 
-.u-spbr {
+.u-br-sp {
   @include pc {
     display: none;
   }
